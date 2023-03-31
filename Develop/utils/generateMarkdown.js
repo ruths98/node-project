@@ -1,5 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+const license = [renderLicenseBadge,renderLicenseLink];
 function renderLicenseBadge(license) {
   if (license !== 'None') {
     return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
@@ -17,7 +18,7 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+function renderLicenseSection(content) {
   if (license !== 'None') {
     return writeFile(idk)
   }
@@ -25,7 +26,7 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(content) {
-  const content = {title, description, installation, usage, contributing, tests, license, github} ;
+  // const content = {title, description, installation, usage, contributing, tests, license, github} ;
   const READMEContent = `
  # ${title}
  ## ${description}
@@ -45,7 +46,8 @@ function generateMarkdown(content) {
   ## ${usage}
   ${github}
   ## ${credits}
-  ## ${license}
+  ## ${license[0]}
+  ## ${license[1]}
   ## ${tests}
 
   
