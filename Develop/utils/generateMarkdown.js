@@ -1,3 +1,5 @@
+const fs = require('fs')
+const licenseGenerator = require('license-generator');
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -11,7 +13,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== 'None') {
-    return `![GitHub license](https://...)`//finish the link somehow idk
+    return `![GitHub license](https://github.com/ruths98/node-project/blob/main/${license})`//finish the link somehow idk
   }
 }
 
@@ -19,37 +21,35 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== 'None') {
-    return writeFile(idk)
+    return fs.writeFile('./develop/LICENSE.txt',licenseText, (err) => {
+      if (err){ 
+      console.err(err);
+    }
+    console.log('license written!')
+  })
   }
 }
-
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(content) {
-  const content = {title, description, installation, usage, contributing, tests, license, github} ;
-  const READMEContent = `
+const generateReadMe = ({title, description, installation, usage, github, credits, license}) => 
+   `
  # ${title}
- ## ${description}
- ## ${ToC}
-  - [Installation](#installation)
+ 
+ ## Description:
+ ${description}
 
-  - [Usage](#usage)
-  
-  - [License](#license)
-  
-  - [Contributing](#contributing)
-  
-  - [Tests](#tests)
-  
-  -* [Questions](#questions)
-  ## ${installation}
-  ## ${usage}
-  ${github}
-  ## ${credits}
-  ## ${license}
-  ## ${tests}
+## Installation:
+${installation}
 
-  
+ ## Usage:
+ ${usage}
+ Github:${github}
+
+## Credits:
+${credits}
+
+## License:
+${license}
+${renderLicenseBadge(license)}
+${renderLicenseLink(license)}
   `;
-}
-
-module.exports = generateMarkdown;
+module.exports = generateReadMe;
