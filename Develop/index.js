@@ -5,6 +5,7 @@ const inquirer = require('inquirer');
   // TODO: Create an array of questions for user input
 inquirer
   .prompt([
+    
     {
       type: 'input',
       name: 'title',
@@ -34,13 +35,8 @@ inquirer
       type: 'input',
       name: 'credits',
       message: 'Who would you like to give credit to for this project, outside of yourself?',
-    },
-    {
-      type: 'list',
-      name: 'license',
-      message: 'What type of  license would you like to use for this project?',
-      choices:['MIT','other']
-    },
+    }
+   
   
   ])
   
