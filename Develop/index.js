@@ -33,8 +33,19 @@ inquirer
     },
     {
       type: 'input',
+      name: 'url',
+      message: 'Paste your live project URL here:',
+    },
+    {
+      type: 'input',
       name: 'credits',
       message: 'Who would you like to give credit to for this project, outside of yourself?',
+    },
+    {
+      type: 'list',
+      name: 'license',
+      message: 'What type of  license did you select for this project?',
+      choices:['MIT','none']
     }
    
   

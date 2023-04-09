@@ -19,7 +19,7 @@ function renderLicenseLink(license) {
 
 
 // TODO: Create a function to generate markdown for README
-const generateReadMe = ({title, description, installation, usage, github, credits, license}) => 
+const generateReadMe = ({title, description, installation, usage, github, url, credits, license}) => 
    `
  # ${title}
  
@@ -32,6 +32,7 @@ ${installation}
  ## Usage:
  ${usage}
  Github:${github}
+ Link to live app: ${url}
 
 ## Credits:
 ${credits}
