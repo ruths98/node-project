@@ -12,9 +12,11 @@ run 'npm inquirer' in the terminal to install inquirer.
  Github:https://github.com/ruths98/node-project
  ![Screenshot.1](./images/ss1.png)
  ![Screenshot.2](./images/ss2.png)
+ Link to demonstration video: https://drive.google.com/file/d/11dp19v8afqw_Gy-Uytpy_QQJbUSrD9hi/view
 
 ## Credits:
-n/a
+this npm module was used: https://www.npmjs.com/package/inquirer
+Starter code was provided by https://github.com/coding-boot-camp/potential-enigma
 
 ## License:
 none
