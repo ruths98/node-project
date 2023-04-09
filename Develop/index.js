@@ -39,8 +39,8 @@ inquirer
       type: 'list',
       name: 'license',
       message: 'What type of  license would you like to use for this project?',
-      choices:['MIT','other']
-    },
+      choices:['MIT','GPL','Apache 2.0','BSD 3-Clause','LGPL','BSD 2-Clause "simplified"','Mozilla Public','AGPL','The Unilicense', 'Eclipse Public License', 'none']
+    }
   
   ])
   
