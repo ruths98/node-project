@@ -31,8 +31,9 @@ ${installation}
 
  ## Usage:
  ${usage}
- Github:${github}
+ github:${github}
  Link to live app: ${url}
+ To report issues: ${email}
 
 ## Credits:
 ${credits}

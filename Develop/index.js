@@ -37,6 +37,11 @@ inquirer
       message: 'Paste your live project URL here:',
     },
     {
+      type:'input',
+      name:'email',
+      message:'What is your email address?'
+    },
+    {
       type: 'input',
       name: 'credits',
       message: 'Who would you like to give credit to for this project, outside of yourself?',
